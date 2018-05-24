@@ -1249,7 +1249,6 @@ PARAMETER_INFOS AS
     SELECT 'SYSREP',  'indexserver.ini',  'persistence',  'log_segment_size_mb',    ' ', '1024',  '-- no recommendation --', '-- no recommendation --', '-- no recommendation --', 10,  12.039, 2, 2, '2572012', 'system_replication',  ' ' from DUMMY UNION ALL
     SELECT 'SYSREP',  'global.ini',   'system_replication', 'enable_cache_pages_for_preload_version_check',     ' ', 'true',  '-- no recommendation --', '-- no recommendation --', '-- no recommendation --', 10,  11.999, 2, 2, '2587465', 'system_replication;delta_data_shipping',  ' ' from DUMMY UNION ALL
     SELECT 'SYSREP',  'nameserver.ini',   'distribution', 'systemreplication_protocol_version',     ' ', '0',   '-- no recommendation --', '-- no recommendation --', '-- no recommendation --', 10,  -1, 2, 2, '2587258', 'system_replication;HANA_Client',  ' ' from DUMMY UNION ALL
-   SELECT 'ALL','indexserver.ini','distribution','client_distibution_mode',' ','off','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.049,2,2,'2591281','JDBC;lock_manager',' ' from DUMMY UNION ALL
 SELECT 'ALL','indexserver.ini','row_engine','garbage_lob_file_handler_enabled',' ','false','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.009,2,2,'2413261','LOB;GC',' ' from DUMMY UNION ALL
 SELECT 'MULTI','indexserver.ini','query_mediator','cache_enable',' ','0','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.029,2,2,'2555376','indexserver_crash;scale-out;sql_plan_cache',' ' from DUMMY UNION ALL
 SELECT 'MULTI','indexserver.ini','calcengine','gc_cleanup_retention_sec',' ','604800','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.009,2,2,'2474345','calc_engine;scale-out;GC;performance',' ' from DUMMY UNION ALL
@@ -1304,7 +1303,6 @@ SELECT 'SYSREP','indexserver.ini','persistence','log_segment_size_mb',' ','1024'
 SELECT 'SYSREP','global.ini','system_replication','enable_cache_pages_for_preload_version_check',' ','true','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,11.999,2,2,'2587465','system_replication;delta_data_shipping',' ' from DUMMY UNION ALL
 SELECT 'SYSREP','indexserver.ini','distribution','systemreplication_protocol_version',' ','0','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.049,2,2,'2587258','hana_client;system_replication',' ' from DUMMY UNION ALL
 SELECT 'ALL','indexserver.ini','distribution','client_distibution_mode',' ','off','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.049,2,2,'2591281','JDBC;lock_manager',' ' from DUMMY UNION ALL
-SELECT 'ALL','indexserver.ini','sql','conservative_cs_anti_join_estimation_enabled',' ','true','-- no recommendation --','-- no recommendation --','-- no recommendation --',-,-1,2,2,'1999998','-',' ' from DUMMY UNION ALL
 SELECT 'ALL','indexserver.ini','sql','reload_tables',' ','false','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.039,2,2,'2598453','indexserver_crash;transaction;MVCC',' ' from DUMMY UNION ALL
 SELECT 'ALL','global.ini','backup','max_log_backup_size',' ','0','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.049,2,2,'2592954','backup;backint;',' ' from DUMMY UNION ALL
 SELECT 'ALL','indexserver.ini','joins','disable_aggregate_simplification',' ','true','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.039,2,2,'2583884','attribute_engine;trace',' ' from DUMMY UNION ALL
@@ -1352,7 +1350,7 @@ SELECT 'ALL','global.ini','performance_analyzer','plan_trace_enable',' ','false'
 SELECT 'ALL','global.ini','persistence','non_trans_cch_block_size',' ','134217728','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,-1,2,2,'1999998','parameter;delta_merge',' ' from DUMMY UNION ALL
 SELECT 'SYSREP','nameserver.ini','sld','enable',' ','false','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.019,2,2,'2577511','SLD;system_replication',' ' from DUMMY UNION ALL
 SELECT 'ALL','nameserver.ini','sld','enable',' ','false','-- no recommendation --','-- no recommendation --','-- no recommendation --',10,12.019,2,2,'2577511','SLD;MDC',' ' from DUMMY UNION ALL
-   SELECT 'ALL',         'xsengine.ini',         'sql',                      'use_startup_timezone',                      ' ', 'false',                    '-- no recommendation --', '-- no recommendation --', '-- no recommendation --', 65,    68,  1,  1, '1932132', 'terminations',   ' ' FROM DUMMY 
+SELECT 'ALL',         'xsengine.ini',         'sql',                      'use_startup_timezone',                      ' ', 'false',                    '-- no recommendation --', '-- no recommendation --', '-- no recommendation --', 65,    68,  1,  1, '1932132', 'terminations',   ' ' FROM DUMMY 
   ) P
 ),
 PARAMETER_SETTINGS AS
